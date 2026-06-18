@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.container{
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+button{
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+.Operation{
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.Operation button{
+    min-width: 180px;
+}
+
+.Operation button:nth-child(1){
+    background: linear-gradient(45deg, #10b981, #34d399);
+}
+
+.Operation button:nth-child(2){
+    background: linear-gradient(45deg, #ef4444, #f87171);
+}
+
+.Operation button:nth-child(3){
+    background: linear-gradient(45deg, #f59e0b, #fbbf24);
+}
+
+.Operation button:nth-child(4){
+    background: linear-gradient(45deg, #06b6d4, #22d3ee);
+}
+
+.Operation button:nth-child(5){
+    background: linear-gradient(45deg, #8b5cf6, #a78bfa);
+}
+
+.Operation button:nth-child(6){
+    background: linear-gradient(45deg, #ec4899, #f472b6);
+}
+
+@media screen and (max-width: 992px){
+
+    .container{
+        width: 85%;
+        padding: 35px;
+    }
+
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .Operation{
+        width: 95%;
+    }
+
+    .Operation button{
+        min-width: 160px;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+    body{
+        gap: 20px;
+    }
+
+    .container{
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    button{
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .Operation{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Operation button{
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+
+    h1{
+        font-size: 1.6rem;
+    }
+
+    .container{
+        padding: 25px 15px;
+    }
+
+    button{
+        font-size: 15px;
+        padding: 10px 18px;
+    }
+
+    .Operation button{
+        max-width: 100%;
+    }
+}

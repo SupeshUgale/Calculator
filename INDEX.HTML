@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Basic Calculator</h1>
+        <button onclick="startCalculator()">Enter Numbers</button>
+    </div>
+
+    <div class="Operation">
+        <button onclick="Addition()">Addition</button>
+        <button onclick="Subtraction()">Subtraction</button>
+        <button onclick="Multiplication()">Multiplication</button>
+        <button onclick="Division()">Division</button>
+        <button onclick="Modulus()">Modulus</button>
+        <button onclick="Exponentiation()">Exponentiation</button>
+    </div>
+
+    <script>
+        let num1, num2;
+
+        const add = (a, b) => a + b;
+        const sub = (a, b) => a - b;
+        const mul = (a, b) => a * b;
+        const div = (a, b) => a / b;
+        const mod = (a, b) => a % b;
+        const power = (a, b) => a ** b;
+
+        const startCalculator = () => {
+            num1 = Number(prompt("Enter First Number"));
+            num2 = Number(prompt("Enter Second Number"));
+
+            console.log("First Number:", num1);
+            console.log("Second Number:", num2);
+        };
+
+        const Addition = () => {
+            const result = add(num1, num2);
+            console.log(`Operation: Addition, Result: ${result}`);
+            alert(`Addition = ${result}`);
+        };
+
+        const Subtraction = () => {
+            const result = sub(num1, num2);
+            console.log(`Operation: Subtraction, Result: ${result}`);
+            alert(`Subtraction = ${result}`);
+        };
+
+        const Multiplication = () => {
+            const result = mul(num1, num2);
+            console.log(`Operation: Multiplication, Result: ${result}`);
+            alert(`Multiplication = ${result}`);
+        };
+
+        const Division = () => {
+            const result = div(num1, num2);
+            console.log(`Operation: Division, Result: ${result}`);
+            alert(`Division = ${result}`);
+        };
+
+        const Modulus = () => {
+            const result = mod(num1, num2);
+            console.log(`Operation: Modulus, Result: ${result}`);
+            alert(`Modulus = ${result}`);
+        };
+
+        const Exponentiation = () => {
+            const result = power(num1, num2);
+            console.log(`Operation: Exponentiation, Result: ${result}`);
+            alert(`Exponentiation = ${result}`);
+        };
+    </script>
+
+</body>
+</html>
